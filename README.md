@@ -1,0 +1,2 @@
+# term_ssh_user_firefox
+term_ssh_user_firefox Docker image
