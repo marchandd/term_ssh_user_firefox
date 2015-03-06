@@ -1,10 +1,11 @@
 #!/bin/bash
 # User creation
 # Generate a random password with 15 characters that includes at least one capital letter and number.
-DOCKER_PASSWORD=`pwgen -c -n -1 15`
-#DOCKER_PASSWORD='docker'
+#DOCKER_PASSWORD=`pwgen -c -n -1 15`
 # Generate a random very complex password
 #DOCKER_PASSWORD=`pwgen -s -y -1 15 1`
+# Set a basic fixed password for Docker public repository access.
+DOCKER_PASSWORD='term_ssh_user_firefox'
 echo docker password: $DOCKER_PASSWORD
 DOCKER_ENCRYPYTED_PASSWORD=`perl -e 'print crypt('"$DOCKER_PASSWORD"', "aa"),"\n"'`
 useradd -m -d /home/docker -p $DOCKER_ENCRYPYTED_PASSWORD docker

@@ -26,11 +26,7 @@ Around 500 Mb.
 
 ### Command line
 
-:computer: `docker pull marchandd/term_ssh_user_firefox > build.log`
-
-### Command line explanation
-
-Search password value into build.log file to access later to container.
+:computer: `docker pull marchandd/term_ssh_user_firefox`
 
 ### Firewall
 
@@ -58,6 +54,7 @@ Where YYYYY is your Private port, if you doesn't know free port, try from 49200.
 ### SSH access
 
 Open terminal with docker account.
+Basic fixed password for Docker public repository = 'term_ssh_user_firefox'
 
 :computer: `ssh -X docker@XXX.XXX.XXX.XXX -p YYYYY`
 
